@@ -1,0 +1,485 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Sabrina's Website</title>
+    <style>
+         #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    background: #000; 
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+        @keyframes fadeInSlide {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        50% {
+            opacity: 0.5;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        animation: fadeInSlide 5s ease-out; 
+    }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('page1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        header {
+            background: rgba(255, 134, 191, 0.9);  
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 3px solid #f1f1f1;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+       
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
+
+    
+         .date-time {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #f1f1f1;
+        }
+
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 6px 0;
+            background-color: white;
+        }
+
+        nav {
+    position: fixed;
+    top: 0;
+    left: -300px; 
+    width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    transition: left 0.5s ease; 
+    z-index: 2000;
+}
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 20px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #4CAF50;
+        }
+
+        nav.active {
+            left: 0;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; 
+            margin: 20px auto;
+            max-width: 90%;
+        }
+
+        .center-video {
+            width: 50%; 
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .side-image {
+            height: 350px; 
+            width: auto; 
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .description {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(251, 100, 171, 0.9); 
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            text-align: justify;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .cards-section {
+    display: grid;
+    grid-template-columns: repeat(3,minmax (300px, 1fr)); 
+    grid-template-rows: auto auto auto; 
+    grid-template-areas: 
+        ". card1 ." 
+        "card2 card3 card4" 
+        ". card5 ."; 
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 {
+    grid-area: card1; 
+}
+
+.card2 {
+    grid-area: card2; 
+}
+
+.card3 {
+    grid-area: card3; 
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5; 
+}
+
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.6); 
+            cursor: pointer;
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .card:hover .overlay {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+@media (max-width: 768px) {
+    .cards-section {
+        grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+        gap: 10px;
+    }
+
+    .card {
+        width: 200px; 
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-section {
+        grid-template-columns: 1fr; 
+    }
+
+    .card {
+        width: 90%; 
+        height: auto; 
+    }
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgba(244, 134, 185, 0.9); 
+    padding: 10px 0;
+    margin-top: -20px;
+    border-top: 2px solid #fff;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(244, 134, 185, 0.9);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #d2d7d2;
+    color: #fff;
+}
+
+footer {
+            background-color: rgba(244, 134, 185, 0.9);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            color: #333;
+            font-size: 16px;
+            border-top: 3px solid #fffbfd;
+        }
+        .footer-link {
+        font-weight: bold;
+        color: #f6f7fe; 
+        text-decoration: none; 
+        transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+        color: #f5f5f5; 
+        text-decoration: underline;
+    }
+
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="backgroundvid.mp4" type="video/mp4">
+    </video>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>🎀𝓦𝓔𝓛𝓒𝓞𝓜𝓔 𝓣𝓞 𝓝𝓤𝓡 𝓕𝓐𝓣𝓗𝓘𝓝 𝓢𝓐𝓑𝓡𝓘𝓝𝓐 𝓦𝓔𝓑𝓢𝓘𝓣𝓔🎀</h1>
+        <p><i>Statement of responsibility: Created by Fathin Sabrina</i></p>
+        
+       
+    
+
+       
+ 
+     <div class="date-time" id="dateTime">
+    </div>
+<br>
+
+    <audio controls>
+        <source src="audio/music.mp3" type="audio/mpeg">
+    </audio>
+</header>
+
+<div class="navigation-bar">
+    <a href="index.html" class="nav-button">Home</a>
+    <a href="biodata.html" class="nav-button">Biodata</a>
+    <a href="experience.html" class="nav-button">Experience</a>
+    <a href="education.html" class="nav-button">Education</a>
+    <a href="family.html" class="nav-button">Family</a>
+    <a href="gallery.html" class="nav-button">Gallery</a>
+</div>
+
+    
+  
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">Biodata</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="video-container">
+        <img src="left-image.jpg" alt="Gambar Kiri" class="side-image">
+        <video autoplay loop muted playsinline class="center-video">
+            <source src="vid1.mp4" type="video/mp4">
+        </video>
+        <img src="right-image.jpg" alt="Gambar Kanan" class="side-image">
+    </div>
+<br>
+
+    <div class="description">
+        First of all, I would like to express my gratitude for being given the opportunity and space to complete individual assignments for the subject <b><i>INTRODUCTION TO WEB CONTENT MANAGEMENT AND DESIGN (IMD318).</i></b>  Without the blessing of health that He has blessed me with, I may not be able to complete this task within the prescribed period.
+
+success. Maybe my website is not as great and beautiful as others, but this is my journey in preparing this website. So let's look at my website together.
+<br>
+<br>
+A wreath of appreciation and a million thanks to <b>Mrs. Ummu Asyikin Binti Othman </b>as the lecturer for this subject, for all the guidance and guidance throughout the process of completing this assignment. It was with the guidance and instruction that strengthened my understanding of the requirements of the task instructions and finally I tried to complete this task successfully.
+
+On this occasion, I am also pleased to thank my friends who shared their knowledge and opinions together and encouraged each other to not give up in giving their best for the sake of excellent work. Not forgetting my family members who never stopped supporting and encouraging me to stay enthusiastic in the journey of gaining this knowledge and further achieving my life goals.
+    </div>
+
+<div class="cards-section">
+    <div class="card card1" onclick="window.location.href='biodata.html'">
+        <img src="sab1.jpg" alt="Sab1 Image">
+        <div class="overlay">BIODATA</div>
+    </div>
+    <div class="card card2" onclick="window.location.href='experience.html'">
+        <img src="venture.jpg" alt="Experience">
+        <div class="overlay">EXPERIENCE</div>
+    </div>
+    <div class="card card3" onclick="window.location.href='education.html'">
+        <img src="education.jpg" alt="Education">
+        <div class="overlay">EDUCATION</div>
+    </div>
+    <div class="card card4" onclick="window.location.href='family.html'">
+        <img src="family.jpg" alt="Family">
+        <div class="overlay">FAMILY</div>
+    </div>
+    <div class="card card5" onclick="window.location.href='gallery.html'">
+        <img src="cm.jpg" alt="Gallery">
+        <div class="overlay">GALLERY</div>
+    </div>
+</div>
+
+
+<script>
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    function updateDateTime() {
+        const dateTimeElement = document.getElementById("dateTime");
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const today = new Date();
+
+        const day = days[today.getDay()];
+        const date = today.toLocaleDateString();
+        const time = today.toLocaleTimeString();
+
+        dateTimeElement.innerHTML = `${day}, ${date} - ${time}`;
+    }
+
+    
+    setInterval(updateDateTime, 1000);
+  
+</script>
+
+<br>
+<footer>
+    <p>Copyright &copy; 2024 Fathin Sabrina. All rights reserved.</p>
+    <p>Find me on 
+        <a href="https://www.instagram.com/fhnsabrina" target="_blank"><span style="color: #ffffff;">Instagram</span></a>, 
+        <a href="https://www.tiktok.com/@nrsbbyy" target="_blank"><span style="color: #ffffff;">TikTok</span></a>, and 
+        <a href="https://wa.me/601127334095" target="_blank"><span style="color: #ffffff;">WhatsApp</span></a>.
+    </p>
+</footer>
+</body>
+</html>
+
