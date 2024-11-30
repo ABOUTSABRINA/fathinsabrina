@@ -1,0 +1,398 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATHIN SABRINA BIODATA</title>
+    <style>
+        body {
+            background-image: url('biodatawall.jpg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(108, 108, 108, 0.9); 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff69b4;
+        }
+
+        nav {
+            background-color: rgba(255, 182, 193, 0.9); 
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff69b4; 
+            text-decoration: underline;
+        }
+
+        .marquee-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #ff69b4;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .marquee-box marquee {
+            font-size: 16px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        section {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #ff69b4;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        td {
+            background-color: #ebabc1;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(249, 247, 247, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .gallery img {
+            width: 45%;
+            height: auto;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .description {
+            text-align: justify;
+            line-height: 1.5; 
+        }
+
+        #favorite-cartoon {
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(249, 247, 247, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 85%;
+}
+
+.cartoon-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.cartoon-box {
+    width: 60%; 
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.cartoon-box img, .cartoon-box video {
+    width: 100%; 
+    height: auto;
+    border-radius: 15px;
+}
+
+.cartoon-box audio {
+    width: 100%;
+    margin-top: 15px;
+}
+.cartoon-description {
+    font-size: 14px; 
+    color: #333; 
+    margin-top: 10px; 
+    text-align: center; 
+    line-height: 1.5; 
+    font-family: 'Arial', sans-serif; 
+}
+
+
+
+
+        .social-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            background-color: rgba(132, 131, 131, 0.9);
+            margin: 20px auto;
+            border-radius: 15px;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .social-box a {
+            text-decoration: none;
+            color: #ff69b4;
+            font-size: 24px;
+        }
+        .social-box a:hover {
+            color: #333;
+        }
+
+        footer {
+    background-color: rgba(121, 120, 120, 0.9); 
+    text-align: center;
+    padding: 15px; 
+    color: #333;
+    font-size: 14px; 
+    border-top: 3px solid #ff69b4;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px; 
+}
+
+.fadeslide {
+    opacity: 0;
+    transform: translateX(-100%); /* Mula dari luar kiri */
+    animation: fadeSlide 2s ease forwards; /* 2 saat untuk animasi */
+}
+
+/* Definisi animasi */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Kembali ke posisi asal */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="fadeslide">FATHIN SABRINA BIODATA</h1>
+        <p><i>Statement of responsibility: Created by Fathin Sabrina.</i></p>
+    </header>
+    
+
+    <nav>
+        <a href="index.html">Home</a> 
+        <a href="experience.html">Experience</a> 
+        <a href="education.html">Education</a> 
+        <a href="family.html">Family</a> 
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <div class="marquee-box">
+        <marquee>
+             Instagram: fhnsabrina      |    TikTok: nrsbbyy        |  WhatsApp: +601127334095    |  Email: 2022821276@student.uitm.com
+        </marquee>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <audio controls autoplay>
+            <source src="audio/biodatamusic.mp3" type="audio/mpeg"> 
+        </audio>
+    </div>
+
+    <section>
+        <h2>PERSONAL INFORMATION</h2>
+        <table>
+            <tr>
+                <th>Full Name</th>
+                <td>Nur Fathin Sabrina Binti Abdullah Kutty</td>
+            </tr>
+            <tr>
+                <th>Student Id</th>
+                <td>2022821276</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>20</td>
+            </tr>
+            <tr>
+                <th>University</th>
+                <td>
+                    <a href="https://maps.app.goo.gl/cyBGJVpvMSYdQNqX9" target="_blank">
+                        <img src="ikonmaps.png" alt="Location Icon" style="width:20px; vertical-align:middle;">
+                    </a>
+                    UiTM Segamat 
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <th>Programme</th>
+                <td>Information Management</td>
+            </tr>
+            <tr>
+                <th>Hobby</th>
+                <td>
+                    <ul>
+                        <li>Cooking</li>
+                        <li>Archery</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Favourite Food</th>
+                <td>
+                    <ul>
+                        <li>Spaghetti</li>
+                        <li>Ayam Masak Merah</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Ambition</th>
+                <td>
+                    <ol>
+                        <li>Data Analyst</li>
+                        <li>Teacher</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <th>Quotes of The Day</th>
+                <td>“The bravest heart is the one that stays close to Allah, even when its in pain.”</td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="box">
+        <h2>ABOUT ME </h2>
+        <div class="gallery">
+            <img src="sab1.jpg" alt="Image 1">
+            <img src="sab2.jpg" alt="Image 2">
+        </div>
+        <div class="description">
+            <p>Hi My Name is Nur Fathin Sabrina. You can call me Sabrina. I am a student in the field of Information Management at the diploma level. Throughout my studies, I have learned a variety of skills, including data and records management, information analysis, and the use of technology to support organizational effectiveness. I aspire to build a career in the field of data analysis, where I can contribute to strategic decision-making based on accurate and relevant information.
+
+                In addition, I am also actively involved in extracurricular activities and programs organized by the campus to improve soft skills such as leadership, communication, and team collaboration. I believe that effort, discipline, and continuous learning are the keys to achieving success.</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>ABOUT ME</h2>
+        <div class="gallery">
+            <img src="sab3.jpg" alt="Image 3">
+            <img src="sab4.jpg" alt="Image 4">
+        </div>
+        <div class="description">
+            <p>My academic journey in Information Management was full of challenges, yet provided many meaningful experiences. Starting with the basics such as an introduction to information agencies, how to ensure users receive authentic information, creating an outreach program, creating my own website until the final task, I learned to think critically and solve problems creatively.
+
+                Through assignments such as case studies, I was able to better practice my analytical and time management skills. This challenge is not only educational, but also prepares me to face a more dynamic world of work. I always relate the Malay proverb in my life which is to struggle first, have fun later because effort will not betray the results.</p>
+        </div>
+    </div>
+
+
+    <div class="box" id="favorite-cartoon">
+        <h2>MY FAVOURITE CARTOON</h2>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>My Favorite Cartoons</title>
+            <link rel="stylesheet" href="styles.css"> 
+        </head>
+        <body>
+        
+        
+            <div id="favorite-cartoon">
+                <div class="cartoon-container">
+                    <div class="cartoon-box">
+                        <img src="doraemon.jpg" alt="Doraemon">
+                        <p class="cartoon-description">Doraemon is a popular Japanese cartoon character, a robotic cat from the future. He helps his owner, Nobita, navigate life's challenges with his gadgets from the future. Doraemon's kind and comical nature makes him a beloved character worldwide.</p>
+                    </div>
+                    <div class="cartoon-box">
+                        <img src="kampungboy.jpg" alt="Upin & Ipin">
+                        <p class="cartoon-description">The Kampung Boy tells the story of a young boy, Mat, and his childhood in a kampung (village). A graphic novel, it illustrates the boy's life in pictures and words. Aside from being the protagonist, Lat is also the narrator.</p>
+                    </div>
+                    <div class="cartoon-box">
+                        <video controls>
+                            <source src="upinipin.mp4" type="video/mp4">
+                        </video>
+                        <p class="cartoon-description">Upin Ipin is a cute twin cartoon that accompanied my free time from childhood to adulthood. Episode after episode that is shown always gives a lesson to the audience.</p>
+                    </div>
+                </div>
+            </div>
+        
+        </body>
+        </html>
+        
+    
+
+    <div class="social-box">
+        <a href="https://www.instagram.com/fhnsabrina/profilecard/?igsh=MXVnaTBkejN3czc3dA==" target="_blank">📸</a>
+        <a href="https://www.tiktok.com/@nrsbbyy?_t=8rXqPO0piFM&_r=1" target="_blank">🎥</a>
+        <a href="email:2022821276@student.uitm.edu.com">📧</a>
+    </div>
+
+<footer>
+    <p>Copyright &copy; 2024 Fathin Sabrina. All rights reserved.</p>
+    <p>Find me on 
+        <a href="https://www.instagram.com/fhnsabrina" target="_blank">Instagram</a>, 
+        <a href="https://www.tiktok.com/@nrsbbyy" target="_blank">TikTok</a>, and 
+        <a href="https://wa.me/601127334095" target="_blank">WhatsApp</a>.
+    </p>
+</footer>
+
+</script>
+</body>
+</html>
+
+
