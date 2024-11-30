@@ -1,0 +1,390 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATHIN SABRINA EDUCATION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #1b1a1a;
+            background-image: url('educationwall.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+        }
+        header {
+            background-color: rgba(234, 165, 172, 0.9); 
+            color: #2c2b2b;
+            padding: 1em 0;
+            text-align: center;
+            border-bottom: 2px solid #e5b8bf;
+        }
+        header h1 {
+            color: black; 
+            font-weight: bold; 
+        }
+        nav {
+            background-color: rgba(255, 191, 196, 0.9);
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            display: inline-block;
+            color: #363535;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #f3d0d0;
+        }
+        marquee {
+            background-color: rgba(235, 224, 225, 0.9);
+            color: #363535;
+            font-weight: bold;
+            padding: 10px 0;
+            font-size: 1rem;
+        }
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            color: #b799a3;
+        }
+        .intro-box {
+            border: 1px solid #e5b8bf;
+            background-color: rgba(249, 246, 247, 0.9);
+            padding: 15px;
+            margin: 20px auto;
+            text-align: justify;
+            max-width: 800px;
+            font-style: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f6d5d8;
+            color: #4a4a4a;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(247, 190, 195, 0.9);
+            color: #4a4a4a;
+            margin-top: 20px;
+            border-top: 2px solid #e5b8bf;
+        }
+        
+        .logo-box {
+            width: 200px;
+            text-align: center;
+            border: 1px solid #e5b8bf;
+            background-color: rgba(249, 246, 247, 0.9);
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        
+        .description-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f6d5d8;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 80%;
+            min-width: 300px;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .description-box p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        .animated-title {
+    text-align: center;
+    font-size: 2.5em; /* Saiz tulisan */
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.animated-title span {
+    opacity: 0; /* Hilang dulu */
+    display: inline-block;
+    animation: fadeInDance 2s ease forwards;
+    animation-delay: calc(var(--i) * 0.2s); /* Setiap huruf delay */
+}
+
+@keyframes fadeInDance {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Lompat dari atas */
+    }
+    50% {
+        transform: translateY(10px); /* Melantun sedikit */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Balik ke tempat asal */
+    }
+}
+
+
+    </style>
+
+      <script>
+        function showDescription(descriptionId) {
+            var overlay = document.getElementById('overlay');
+            var descriptionBox = document.getElementById(descriptionId);
+
+           
+            overlay.style.display = 'block';
+            descriptionBox.style.display = 'block';
+        }
+
+        function closeDescription() {
+            var overlay = document.getElementById('overlay');
+            var descriptionBoxes = document.querySelectorAll('.description-box');
+
+          
+            overlay.style.display = 'none';
+            descriptionBoxes.forEach(function(box) {
+                box.style.display = 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="animated-title">
+            <span style="--i:1">F</span>
+            <span style="--i:2">A</span>
+            <span style="--i:3">T</span>
+            <span style="--i:4">H</span>
+            <span style="--i:5">I</span>
+            <span style="--i:6">N</span>
+            <span style="--i:7"> </span>
+            <span style="--i:8"> </span>
+            <span style="--i:9">S</span>
+            <span style="--i:10">A</span>
+            <span style="--i:11">B</span>
+            <span style="--i:12">R</span>
+            <span style="--i:13">I</span>
+            <span style="--i:14">N</span>
+            <span style="--i:15">A</span>
+            <span style="--i:16"> </span>
+            <span style="--i:17"> </span>
+            <span style="--i:18">E</span>
+            <span style="--i:19">D</span>
+            <span style="--i:20">U</span>
+            <span style="--i:21">C</span>
+            <span style="--i:22">A</span>
+            <span style="--i:23">T</span>
+            <span style="--i:24">I</span>
+            <span style="--i:25">O</span>
+            <span style="--i:26">N</span>
+        </div>    
+        <p><i> Statement of responsibility: Created by Fathin Sabrina.</i></p>    
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="experience.html">Experience</a>
+        <a href="family.html">Family</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <marquee behavior="scroll" direction="left">
+        "Whosoever follows a path to seek knowledge therein, Allah will make easy for him a path to paradise." 🌟
+    </marquee>
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+        <audio controls autoplay>
+            <source src="audio/biodatamusic.mp3" type="audio/mpeg"> 
+        </audio>
+    </div>
+
+    <section>
+        <center> 
+        <h2>Educational Background</h2>
+    </center>
+        <div class="intro-box">
+            <p>
+                My educational journey began at the age of 5-6 in kindergarten, where I learned the basics of reading, writing, and counting.  
+                From the age of 7 to 12, I attended primary school, where I built a strong foundation in academics and religious studies.  
+                At 13, I moved on to secondary school, studying there until I turned 17.  
+                Currently, I am 18 and pursuing my diploma in Information Management at UiTM.  
+                Education has been an incredible journey of growth and self-discovery, and I believe that gaining knowledge is a powerful investment in one's future.  
+            </p>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Institution</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kindergarten</td>
+                    <td>Tadika Matahari, Pasir Gudang</td>
+                    <td>Learned the basics of reading, writing, and counting at the age of 5-6.</td>
+                </tr>
+                <tr>
+                    <td>Primary School</td>
+                    <td>SJK(C) Masai & Sekolah Agama Taman Kota Masai</td>
+                    <td>Studied from Year 1 to Year 6, acquiring foundational knowledge in academics and religious studies.</td>
+                </tr>
+                
+                <tr>
+                    <td>Secondary School</td>
+                    <td>SMK Kota Masai 2, Pasir Gudang</td>
+                    <td>Attended from Form 1 to Form 5 (ages 13-17), actively participating in co-curricular activities. I am also a school superintendent.</td>
+                </tr>
+                <tr>
+                    <td>University</td>
+                    <td>UiTM Segamat, Johor</td>
+                    <td>Currently pursuing a diploma in Information Management at the age of 18 onwards.</td>
+                </tr>
+            </tbody>
+        </table>
+        <section>
+            <center>
+                <h2>Logos of My Educational Journey</h2>
+            </center>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+               
+                <div class="logo-box" onclick="showDescription('kindergartenDesc')">
+                    <img src="tadika.png" alt="Kindergarten Logo" style="width: 100%; border-radius: 10px;">
+                    <img src="matahari.jpg" alt="Kindergarten Logo" style="width: 100%; border-radius: 10px;">
+                    <p><strong>Tadika Matahari</strong></p>
+                </div>
+
+                <div class="logo-box" onclick="showDescription('primarySchoolDesc')">
+                    <img src="sjkcmasai.png" alt="Primary School Logo" style="width: 100%; border-radius: 10px;">
+                    <br> 
+                    <br>
+                    <br>
+                    <br>
+                    <p><strong>SJK(C) Masai</strong></p>
+                </div>
+
+                <div class="logo-box" onclick="showDescription('primarySchoolDesc')">
+                    <img src="sekolahagama.jpg" alt="Primary School Logo" style="width: 100%; border-radius: 10px;">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p><strong>SA Taman Kota Masai</strong></p>
+                </div>
+    
+                <div class="logo-box" onclick="showDescription('secondarySchoolDesc')">
+                    <img src="smkkm2.jpg" alt="Secondary School Logo" style="width: 100%; border-radius: 10px;">
+                    <p><strong>SMK Kota Masai 2 </strong></p>
+                </div>
+    
+                <div class="logo-box" onclick="showDescription('universityDesc')">
+                    <img src="uitm.jpg" alt="University Logo" style="width: 100%; border-radius: 10px;">
+                    <br>
+                    <br>
+                    <br>
+
+                    <p><strong>UiTM Segamat</strong></p>
+                </div>
+             </div>
+    </section>
+    
+           
+    <div id="overlay" class="overlay" onclick="closeDescription()"></div>
+
+    <div id="kindergartenDesc" class="description-box">
+        <p><strong>Tadika Matahari</strong><br>Matahari Kindergarten was the first place for me as a student. Matahari Kindergarten is a Chinese kindergarten. It was not easy at first to learn and understand the language and write Chinese words, not to mention to communicate in Chinese because both my parents did not have basic Chinese. However, thanks to the efforts, the guidance from the kindergarten teacher and the efforts of my parents, I was able to understand a little bit of Chinese. Likewise with other subjects such as spelling, writing and counting.</p>
+        <button onclick="closeDescription()">Close</button>
+    </div>
+
+    <div id="primarySchoolDesc" class="description-box">
+        <p><strong>SJK(C) Masai</strong><br>Next, SJK(C) Masai which is the second place for me to gain knowledge as a student. This elementary school taught me what it means to be a disciplined student. The Chinese school that emphasizes tidiness, rules, manners and the way of socializing really helped me to be a student who obeys the rules. At the beginning it was very difficult for me to follow the pace of this school because there was no use of Malay language except during Malay language classes and Islamic education and rest. If we use the Malay language, we will be fined. My parents and I made various efforts to ensure that I was fluent and understood the Chinese language. I am very grateful to be able to learn and understand languages ​​other than Malay and English fluently.My primary school years were filled with excitement as I learned essential academic subjects along with religious studies that shaped my worldview.</p>
+        <button onclick="closeDescription()">Close</button>
+    </div>
+
+    <div id="primarySchoolDesc" class="description-box">
+        <p><strong>SA Taman Kota Masai</strong><br>Sekolah Agama is my daily primary school as well. Sekolah Agama is a place for me to learn about religious knowledge such as Tawhid, Ibadat, the Qur'an and other subjects up to the special level that we call as Darjah Khas. Many memories are created in this school. Bitter or sweet memories. And from here I can make many new friends.</p>
+        <button onclick="closeDescription()">Close</button>
+    </div>
+
+    <div id="secondarySchoolDesc" class="description-box">
+        <p><strong>SMK Kota Masai 2</strong><br>Next was my fourth school, Taman Kota Masai Secondary School 2 or better known as SMKKM2. In the beginning, it was very difficult for me to adjust myself in this school because during primary school I used fully Chinese for all subjects except Malay, English and Islamic education. So for me to understand all the concepts and questions in the Malay language is very difficult. So, various efforts I made to make sure I could catch up like my other friends to make sure I didn't miss out. Here too I learned a lot of new things. I also dared myself to become a school supervisor because when I was in primary school I was a supervisor. In addition, in this school I was also able to learn and meet more friends until today.</p>
+        <button onclick="closeDescription()">Close</button>
+    </div>
+
+    <div id="universityDesc" class="description-box">
+        <p><strong>UiTM Segamat</strong><br>Next is the university world. After finishing my SPM I was very worried because I was afraid that I wouldn't be able to continue my studies at university. But God's providence is vast, I was finally able to continue my studies in the field of Information Management at UiTM Segamat until today. Here, a variety of styles and people I can recognize. In fact, many of my friends from secondary school were able to continue their studies here like me. The University world is very wide, if we make a small mistake we will be diverted in a bad direction.  So in order to become a useful person after graduating, we need to find good friends and always seek this vast knowledge so that we can apply it in our daily life in the future. Other than that, I have been honing my knowledge and skills in Information Management, with a focus on understanding how data and systems can be managed effectively.</p>
+        <button onclick="closeDescription()">Close</button>
+    </div>
+        
+  
+         
+<footer>
+    <p>Copyright &copy; 2024 Fathin Sabrina. All rights reserved.</p>
+    <p>Find me on 
+        <a href="https://www.instagram.com/fhnsabrina" target="_blank">Instagram</a>, 
+        <a href="https://www.tiktok.com/@nrsbbyy" target="_blank">TikTok</a>, and 
+        <a href="https://wa.me/601127334095" target="_blank">WhatsApp</a>.
+    </p>
+</footer>
+
+    </section>
+</body>
+</html>
+
+
